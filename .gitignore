@@ -1,0 +1,8 @@
+dev/.data/
+*PRIVATE*/
+Key.gs
+key.csv
+node_modules/
+__pycache__/
+.DS_Store
+Thumbs.db

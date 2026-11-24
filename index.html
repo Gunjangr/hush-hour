@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hush Hour · blind listening party</title>
+  <meta name="description" content="A blind listening test: rate voice quality and noise suppression of mystery mixes.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>🎧 headphones on</span><span>✦ brands are hidden</span><span>✦ trust your ears</span><span>✦ voice · noise · every word</span><span>✦ no wrong answers</span>
+      <span>🎧 headphones on</span><span>✦ brands are hidden</span><span>✦ trust your ears</span><span>✦ voice · noise · every word</span><span>✦ no wrong answers</span>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a class="logo" href="./" aria-label="Hush Hour home">
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>Hush<em>Hour</em></span>
+    </a>
+    <div class="topbar-right">
+      <span class="pill pill-hp" id="hpPill" hidden>🎧 headphones on</span>
+      <span class="pill pill-me" id="mePill" hidden></span>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- 1 · welcome -->
+    <section class="screen" id="s-welcome" hidden>
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="kicker">A blind listening party</p>
+          <h1 class="mega">Lend us your <span class="hl hl-pink">ears</span>.</h1>
+          <p class="lead">You'll hear short phone-call clips recorded in cafés, clubs, traffic, wind and the metro.
+            Each scene comes in a few <b>mystery mixes</b> from different noise-cancelling systems.
+            Brands are hidden, so just trust your ears and score each one.</p>
+          <div class="cta-row">
+            <button class="btn btn-big btn-pink" id="startBtn">Let's go <span aria-hidden="true">→</span></button>
+            <span class="muted" id="welcomeMeta"></span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="vinyl"><div class="vinyl-label">🎧</div></div>
+          <span class="sticker st1">no peeking!</span>
+          <span class="sticker st2">1 → 5</span>
+        </div>
+      </div>
+      <ol class="steps">
+        <li class="step c-yellow"><span class="step-n">1</span><b>Pick an avatar</b><span>Every avatar can only be claimed once.</span></li>
+        <li class="step c-mint"><span class="step-n">2</span><b>Headphones on</b><span>Speakers hide the details we're judging.</span></li>
+        <li class="step c-sky"><span class="step-n">3</span><b>Rate <span id="perRaterTxt">10</span> scenes</b><span>Voice quality, noise suppression and intelligibility, 1 to 5.</span></li>
+      </ol>
+    </section>
+
+    <!-- 2 · avatar -->
+    <section class="screen" id="s-avatar" hidden>
+      <h2 class="title">Who's listening?</h2>
+      <p class="sub">Type your name and grab an avatar. Each avatar can only be used by one person, and greyed-out ones are taken.</p>
+      <div class="card name-card">
+        <label for="nameInput">Your name <span class="muted">(only the organiser sees it)</span></label>
+        <input id="nameInput" class="input" maxlength="40" autocomplete="name" placeholder="e.g. Priya S.">
+      </div>
+      <div class="avatar-head">
+        <span class="muted" id="takenCount"></span>
+        <button class="link-btn" id="refreshIcons">↻ refresh</button>
+      </div>
+      <div class="avatars" id="avatarGrid" role="radiogroup" aria-label="Avatars"></div>
+      <div class="nav-row">
+        <button class="btn btn-ghost" data-go="welcome">← Back</button>
+        <button class="btn btn-big btn-pink" id="claimBtn" disabled>Claim my avatar →</button>
+      </div>
+    </section>
+
+    <!-- 3 · headphones -->
+    <section class="screen" id="s-headphones" hidden>
+      <div class="hp-hero">
+        <div class="hp-emoji" aria-hidden="true">🎧</div>
+        <div>
+          <h2 class="title">Headphones on, please!</h2>
+          <p class="sub">Laptop and phone speakers hide exactly the details we're judging. Find a quiet spot, put on headphones and keep the volume the same for the whole test.</p>
+        </div>
+      </div>
+      <div class="hp-grid">
+        <div class="card">
+          <h3 class="card-h">What are you wearing?</h3>
+          <div class="chips" id="hpType" role="radiogroup" aria-label="Headphone type">
+            <button class="chip-btn" data-v="over-ear">Over-ear</button>
+            <button class="chip-btn" data-v="on-ear">On-ear</button>
+            <button class="chip-btn" data-v="in-ear">In-ear / earbuds</button>
+          </div>
+          <h3 class="card-h">Connected by</h3>
+          <div class="chips" id="hpConn" role="radiogroup" aria-label="Connection">
+            <button class="chip-btn" data-v="wired">Wire</button>
+            <button class="chip-btn" data-v="bluetooth">Bluetooth</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-h">Quick ear check</h3>
+          <p class="small">Each button beeps in one ear. If the sides are swapped, flip your headphones around.</p>
+          <div class="lr">
+            <button class="btn btn-ghost" id="beepL">👈 Left beep</button>
+            <button class="btn btn-ghost" id="beepR">Right beep 👉</button>
+          </div>
+          <p class="small muted">Set a comfortable volume when the first clip plays, then leave it there.</p>
+        </div>
+      </div>
+      <div class="nav-row">
+        <span></span>
+        <button class="btn btn-big btn-pink" id="toRateBtn" disabled>Start rating →</button>
+      </div>
+    </section>
+
+    <!-- 4 · rating -->
+    <section class="screen" id="s-rate" hidden>
+      <div class="rate-head">
+        <div>
+          <p class="kicker" id="trackNo">Scene 1 of 10</p>
+          <h2 class="scene"><span class="scene-emoji" id="sceneEmoji"></span><span id="sceneTitle"></span><span class="level" id="sceneLevel"></span></h2>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="guideBtn">📖 Score guide</button>
+      </div>
+      <nav class="dots" id="dots" aria-label="Scenes"></nav>
+      <p class="hint">Play the mixes in any order and switch between them as often as you like. Tap a face, or type any score from 1 to 5 in the box (e.g. <b>3.5</b>).</p>
+      <div id="refSlot"></div>
+      <div class="samples" id="samples"></div>
+      <div class="nav-row sticky-nav">
+        <button class="btn btn-ghost" id="prevBtn">← Back</button>
+        <span class="muted small" id="navHint"></span>
+        <button class="btn btn-big btn-pink" id="nextBtn">Next →</button>
+      </div>
+    </section>
+
+    <!-- 5 · review -->
+    <section class="screen" id="s-review" hidden>
+      <h2 class="title">Last look before you lock it in</h2>
+      <p class="sub">Tap any scene to change a score. Once you submit, your ratings are final and this test is done for you.</p>
+      <div class="review" id="reviewList"></div>
+      <div class="nav-row">
+        <button class="btn btn-ghost" id="reviewBack">← Back to scenes</button>
+        <button class="btn btn-big btn-pink" id="submitBtn">Submit my ratings 🚀</button>
+      </div>
+    </section>
+
+    <!-- 6 · done -->
+    <section class="screen" id="s-done" hidden>
+      <div class="done-wrap">
+        <div class="done-avatar" id="doneAvatar">🎉</div>
+        <h2 class="mega">You're a <span class="hl hl-yellow">Golden Ear</span>!</h2>
+        <p class="lead" id="doneText">Your ratings are in. Thank you!</p>
+        <div class="done-stats" id="doneStats"></div>
+        <p class="muted">Each person rates once, so you're all done. You can close this tab.</p>
+      </div>
+    </section>
+
+    <!-- not configured / fatal -->
+    <section class="screen" id="s-error" hidden>
+      <div class="card empty">
+        <div class="big-emoji" aria-hidden="true">🔌</div>
+        <h2 class="title" id="errTitle">Not plugged in yet</h2>
+        <p class="sub" id="errText"></p>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="confirmModal" hidden role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+    <div class="modal-card">
+      <h3 id="confirmTitle">Lock it in?</h3>
+      <p>After submitting you can't change your scores or rate again.</p>
+      <div class="nav-row">
+        <button class="btn btn-ghost" id="confirmNo">Keep editing</button>
+        <button class="btn btn-pink" id="confirmYes">Yes, submit</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="guideModal" hidden role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+    <div class="modal-card wide">
+      <h3 id="guideTitle">Score guide</h3>
+      <div class="guide">
+        <div>
+          <h4>🗣️ Voice quality</h4>
+          <p class="small muted">Listen only to the talker. Is the voice clear and natural, or robotic, muffled, choppy?</p>
+          <ol class="scale" id="guideVoice"></ol>
+        </div>
+        <div>
+          <h4>🔇 Noise suppression</h4>
+          <p class="small muted">Listen only to the background. How much noise is still there, and how annoying is it?</p>
+          <ol class="scale" id="guideNoise"></ol>
+        </div>
+        <div>
+          <h4>👂 Intelligibility</h4>
+          <p class="small muted">Can you make out every word? Score how easy the talker is to understand.</p>
+          <ol class="scale" id="guideIntel"></ol>
+        </div>
+      </div>
+      <p class="small muted">Decimals are fine: 3.5 means "between fair and good".</p>
+      <div class="nav-row"><span></span><button class="btn btn-pink" id="guideClose">Got it</button></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div id="confetti" aria-hidden="true"></div>
+
+  <script src="config.js"></script>
+  <script src="assets/api.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

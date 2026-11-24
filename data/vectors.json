@@ -1,0 +1,466 @@
+{
+ "version": "2026-11-24 18:09",
+ "vectors": [
+  {
+   "id": "V01",
+   "scene": "BarCrowd_75dB",
+   "group": "BarCrowd",
+   "title": "Bar crowd",
+   "level": "75 dB",
+   "emoji": "🍻",
+   "ref": "r_yvm9bnxf",
+   "samples": [
+    "s_ma9yc8js",
+    "s_58b5km6r",
+    "s_5h34hu2y"
+   ]
+  },
+  {
+   "id": "V02",
+   "scene": "BarCrowd_80dB",
+   "group": "BarCrowd",
+   "title": "Bar crowd",
+   "level": "80 dB",
+   "emoji": "🍻",
+   "ref": "r_w8bcrhne",
+   "samples": [
+    "s_n5sxqgmw",
+    "s_u8jpvebj",
+    "s_wexnwver"
+   ]
+  },
+  {
+   "id": "V03",
+   "scene": "BarCrowd_85dB",
+   "group": "BarCrowd",
+   "title": "Bar crowd",
+   "level": "85 dB",
+   "emoji": "🍻",
+   "ref": "r_zt87crxe",
+   "samples": [
+    "s_tqwgrdtj",
+    "s_zdbygnnz",
+    "s_2dcb5kph"
+   ]
+  },
+  {
+   "id": "V04",
+   "scene": "BarCrowd_90dB",
+   "group": "BarCrowd",
+   "title": "Bar crowd",
+   "level": "90 dB",
+   "emoji": "🍻",
+   "ref": "r_fxrhs5vw",
+   "samples": [
+    "s_hk9gd9nq",
+    "s_tdqkwb8t",
+    "s_j3x485yq"
+   ]
+  },
+  {
+   "id": "V05",
+   "scene": "Cafe_65dB",
+   "group": "Cafe",
+   "title": "Café",
+   "level": "65 dB",
+   "emoji": "☕",
+   "ref": "r_ez6r462x",
+   "samples": [
+    "s_t269y2rv",
+    "s_9by7vcp4",
+    "s_h6znafkk"
+   ]
+  },
+  {
+   "id": "V06",
+   "scene": "Cafe_70dB",
+   "group": "Cafe",
+   "title": "Café",
+   "level": "70 dB",
+   "emoji": "☕",
+   "ref": "r_t6hb24b5",
+   "samples": [
+    "s_dc2da37q",
+    "s_mv876rqh",
+    "s_5mjj4rfu"
+   ]
+  },
+  {
+   "id": "V07",
+   "scene": "Cafe_75dB",
+   "group": "Cafe",
+   "title": "Café",
+   "level": "75 dB",
+   "emoji": "☕",
+   "ref": "r_dk42qjdz",
+   "samples": [
+    "s_x83jcsq2",
+    "s_gje5sddw",
+    "s_52pnsd6w"
+   ]
+  },
+  {
+   "id": "V08",
+   "scene": "Cafe_80dB",
+   "group": "Cafe",
+   "title": "Café",
+   "level": "80 dB",
+   "emoji": "☕",
+   "ref": "r_kdveutzv",
+   "samples": [
+    "s_j6ebg257",
+    "s_rc6rg6tp",
+    "s_ra8a2e9a"
+   ]
+  },
+  {
+   "id": "V09",
+   "scene": "Clean_NoNoise",
+   "group": "Clean",
+   "title": "Quiet room",
+   "level": "No noise",
+   "emoji": "🤫",
+   "ref": "r_a4us6frq",
+   "samples": [
+    "s_z6r6bdzv",
+    "s_9z2gy7hw",
+    "s_ehn8zy5k"
+   ]
+  },
+  {
+   "id": "V10",
+   "scene": "Club_70dB",
+   "group": "Club",
+   "title": "Night club",
+   "level": "70 dB",
+   "emoji": "🪩",
+   "ref": "r_9t7wyxu2",
+   "samples": [
+    "s_y2njvmvy",
+    "s_jvjsv22y",
+    "s_aezc2khz"
+   ]
+  },
+  {
+   "id": "V11",
+   "scene": "Club_75dB",
+   "group": "Club",
+   "title": "Night club",
+   "level": "75 dB",
+   "emoji": "🪩",
+   "ref": "r_35tmd478",
+   "samples": [
+    "s_3gr72vu4",
+    "s_66wn79rs",
+    "s_8vwxttvp"
+   ]
+  },
+  {
+   "id": "V12",
+   "scene": "Club_80dB",
+   "group": "Club",
+   "title": "Night club",
+   "level": "80 dB",
+   "emoji": "🪩",
+   "ref": "r_s39credv",
+   "samples": [
+    "s_r2crqpmt",
+    "s_w85ubpve",
+    "s_f7d5pte3"
+   ]
+  },
+  {
+   "id": "V13",
+   "scene": "Club_85dB",
+   "group": "Club",
+   "title": "Night club",
+   "level": "85 dB",
+   "emoji": "🪩",
+   "ref": "r_uxnvc4ru",
+   "samples": [
+    "s_nht87k47",
+    "s_34kjzm7s",
+    "s_dfymvu4e"
+   ]
+  },
+  {
+   "id": "V14",
+   "scene": "IT_High",
+   "group": "IT",
+   "title": "Background chatter",
+   "level": "High",
+   "emoji": "🗣️",
+   "ref": "r_yxgpmndp",
+   "samples": [
+    "s_pg247b7z",
+    "s_jkqtnkfp",
+    "s_n8pmmjyk"
+   ]
+  },
+  {
+   "id": "V15",
+   "scene": "IT_Loud",
+   "group": "IT",
+   "title": "Background chatter",
+   "level": "Loud",
+   "emoji": "🗣️",
+   "ref": "r_pbxv344g",
+   "samples": [
+    "s_n8tpcqmf",
+    "s_pgd3stmx",
+    "s_mvnqjtdk"
+   ]
+  },
+  {
+   "id": "V16",
+   "scene": "IT_Med",
+   "group": "IT",
+   "title": "Background chatter",
+   "level": "Medium",
+   "emoji": "🗣️",
+   "ref": "r_dvekwr5m",
+   "samples": [
+    "s_sjm3cptq",
+    "s_tkdmg4ws",
+    "s_9g6uzpt5"
+   ]
+  },
+  {
+   "id": "V17",
+   "scene": "Pink_75dB",
+   "group": "Pink",
+   "title": "Pink noise",
+   "level": "75 dB",
+   "emoji": "📻",
+   "ref": "r_6zjrj6xf",
+   "samples": [
+    "s_y2pq9ggz",
+    "s_xag4ecj7",
+    "s_ydr2p6c2"
+   ]
+  },
+  {
+   "id": "V18",
+   "scene": "Pink_80dB",
+   "group": "Pink",
+   "title": "Pink noise",
+   "level": "80 dB",
+   "emoji": "📻",
+   "ref": "r_b2gv3uxy",
+   "samples": [
+    "s_z7gecfu4",
+    "s_w544vbea",
+    "s_z6ha6j94"
+   ]
+  },
+  {
+   "id": "V19",
+   "scene": "Pink_85dB",
+   "group": "Pink",
+   "title": "Pink noise",
+   "level": "85 dB",
+   "emoji": "📻",
+   "ref": "r_33cu487y",
+   "samples": [
+    "s_v4ddefgp",
+    "s_3ptp3jy9",
+    "s_xqqrw58t"
+   ]
+  },
+  {
+   "id": "V20",
+   "scene": "Pink_90dB",
+   "group": "Pink",
+   "title": "Pink noise",
+   "level": "90 dB",
+   "emoji": "📻",
+   "ref": "r_3cx8es8y",
+   "samples": [
+    "s_k8qpt74w",
+    "s_dhzxh8fv",
+    "s_xq57ca8z"
+   ]
+  },
+  {
+   "id": "V21",
+   "scene": "Traffic_70dB",
+   "group": "Traffic",
+   "title": "Street traffic",
+   "level": "70 dB",
+   "emoji": "🚗",
+   "ref": "r_fbzwbsvx",
+   "samples": [
+    "s_qkgyyu2e",
+    "s_mysc962u",
+    "s_ss7kqkv8"
+   ]
+  },
+  {
+   "id": "V22",
+   "scene": "Traffic_75dB",
+   "group": "Traffic",
+   "title": "Street traffic",
+   "level": "75 dB",
+   "emoji": "🚗",
+   "ref": "r_n9dn68g5",
+   "samples": [
+    "s_wkgjxy9u",
+    "s_cb82fpef",
+    "s_m6vz63b8"
+   ]
+  },
+  {
+   "id": "V23",
+   "scene": "Traffic_80dB",
+   "group": "Traffic",
+   "title": "Street traffic",
+   "level": "80 dB",
+   "emoji": "🚗",
+   "ref": "r_wpbq7a36",
+   "samples": [
+    "s_7ywmv82y",
+    "s_gh367dyx",
+    "s_8cd4x47a"
+   ]
+  },
+  {
+   "id": "V24",
+   "scene": "Traffic_85dB",
+   "group": "Traffic",
+   "title": "Street traffic",
+   "level": "85 dB",
+   "emoji": "🚗",
+   "ref": "r_8t859ujh",
+   "samples": [
+    "s_jqh6c4uz",
+    "s_dd4qvh33",
+    "s_8yne6amx"
+   ]
+  },
+  {
+   "id": "V25",
+   "scene": "Traffic_90dB",
+   "group": "Traffic",
+   "title": "Street traffic",
+   "level": "90 dB",
+   "emoji": "🚗",
+   "ref": "r_62jf5hkc",
+   "samples": [
+    "s_bpxfhecp",
+    "s_byqansrd"
+   ]
+  },
+  {
+   "id": "V26",
+   "scene": "Wind_20kmph",
+   "group": "Wind",
+   "title": "Wind",
+   "level": "20 km/h",
+   "emoji": "🌬️",
+   "ref": null,
+   "samples": [
+    "s_zbj987d3",
+    "s_d8vjja24",
+    "s_zfw6jfc9"
+   ]
+  },
+  {
+   "id": "V27",
+   "scene": "Wind_30kmph",
+   "group": "Wind",
+   "title": "Wind",
+   "level": "30 km/h",
+   "emoji": "🌬️",
+   "ref": null,
+   "samples": [
+    "s_m2wnevc9",
+    "s_72jtf2qg",
+    "s_eg4jduqy"
+   ]
+  },
+  {
+   "id": "V28",
+   "scene": "Wind_40kmph",
+   "group": "Wind",
+   "title": "Wind",
+   "level": "40 km/h",
+   "emoji": "🌬️",
+   "ref": null,
+   "samples": [
+    "s_rx3zancx",
+    "s_h4bp66tr",
+    "s_8dukn2wr"
+   ]
+  },
+  {
+   "id": "V29",
+   "scene": "Wind_50kmph",
+   "group": "Wind",
+   "title": "Wind",
+   "level": "50 km/h",
+   "emoji": "🌬️",
+   "ref": null,
+   "samples": [
+    "s_bq6rh9tm",
+    "s_4v989bg5",
+    "s_8d779k9w"
+   ]
+  },
+  {
+   "id": "V30",
+   "scene": "MetroPlatform_Live",
+   "group": "Metro",
+   "title": "Metro platform",
+   "level": "Live recording",
+   "emoji": "🚇",
+   "ref": null,
+   "samples": [
+    "s_u4w5r9tm",
+    "s_k3sgzk3s",
+    "s_ycfvdbk6"
+   ]
+  },
+  {
+   "id": "V31",
+   "scene": "SubwayComing_Live",
+   "group": "Metro",
+   "title": "Train arriving",
+   "level": "Live recording",
+   "emoji": "🚆",
+   "ref": null,
+   "samples": [
+    "s_rwqhqjf5",
+    "s_a7c2awd8",
+    "s_npdg2tb8"
+   ]
+  },
+  {
+   "id": "V32",
+   "scene": "PlatformAnnouncement_Live",
+   "group": "Metro",
+   "title": "Platform announcement",
+   "level": "Live recording",
+   "emoji": "📢",
+   "ref": null,
+   "samples": [
+    "s_tbhm2ktw",
+    "s_xjxtnxsv",
+    "s_9p4av6q5"
+   ]
+  },
+  {
+   "id": "V33",
+   "scene": "InsideSubwayAnnouncement_Live",
+   "group": "Metro",
+   "title": "Inside the metro",
+   "level": "Live recording",
+   "emoji": "🚋",
+   "ref": null,
+   "samples": [
+    "s_agfmzsnw",
+    "s_r4q4szvm",
+    "s_zdzbvur7"
+   ]
+  }
+ ]
+}
